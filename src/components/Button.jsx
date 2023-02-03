@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         padding: 20,
         backgroundColor: '#f0f0f0',
         borderWidth: 1,
-        borderColor: '#888'
+        borderColor: '#888',
+        textAlign: 'center'
     }
 })

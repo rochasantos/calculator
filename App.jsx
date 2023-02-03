@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react'
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   View,
@@ -13,11 +13,14 @@ import {
 } from 'react-native'
 
 import Button from './src/components/Button';
+import Display from './src/components/Display';
 
 function App() {
+    const [displayValue, setValue] = useState('0')
     
     return (
         <SafeAreaView style={styles.container}>
+            <Display value={displayValue} />
             <View style={styles.buttons}>
                 <Button label='AC' />
                 <Button label='/' />

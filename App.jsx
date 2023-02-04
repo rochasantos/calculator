@@ -26,11 +26,12 @@ export default class App extends React.Component {
     state = { ...initialState }
 
     addDigit = digit => {
-        // react-native log-android
-        console.debug(typeof this.state.displayValue)
-        if (digit === '.' && this.state.displayValue.includes('.')) return
-
         const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplay
+        
+        // react-native log-android
+        // console.debug(typeof this.state.displayValue)
+        if (digit === '.' && !clearDisplay
+            && this.state.displayValue.includes('.')) return
 
         const currentValue = clearDisplay ? '' : this.state.displayValue
         const displayValue = currentValue + digit
